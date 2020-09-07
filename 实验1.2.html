@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table
+        {
+            margin:10% auto;
+            border:"1";
+        }
+        .bcground
+        {
+            background-color:ghostwhite;
+        }
+        .font_color
+        {
+            color:gray
+        }
+    </style>
+
+</head>
+<body>
+    <table border="1" class="bcground" style="text-align: left;">
+        <tr>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                姓名：
+            </td>
+            <td>
+                <input type="text">
+                <font color = "red">
+                    *
+                </font>
+                出生日期：                   
+                <input type="date" value="2014-01-13">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                身份证号码：
+            </td>
+            <td>
+                <input type="text" name="身份证号码">
+                <font class="font_color">
+                    长度15位或18位，必须和出生日期、性别相对应
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                性别：
+            </td>
+            <td>
+                <select>
+                   <option value="性别">
+                       男
+                   </option>
+                   <option value="性别">
+                       女
+                   </option>
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;民族
+                <select>
+                    <option value="民族">
+                        汉族
+                    </option>
+                    <option value="民族">
+                        壮族
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                婚姻状况               
+            </td>
+            <td>
+                <select>
+                    <option>
+                        未婚
+                    </option>
+                    <option>
+                        已婚
+                    </option>
+                </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;政治面貌：
+                <select>
+                    <option>
+                        共青团员
+                    </option>
+                    <option>
+                        群众
+                    </option>
+                    <option>
+                        民主党派
+                    </option>
+                    <option>
+                        党员
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                户口所在地
+            </td>
+            <td>
+                <select>
+                    <option>
+                        山东省济宁市
+                    </option>
+                </select>
+                现居住地
+                <select>
+                    <option>
+                        山东省济南市芦庄天馨园
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                身高
+            </td>
+            <td>
+                <input type="text">
+                <font class="font_color">
+                    单位：厘米
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                视力状况
+            </td>
+            <td>
+                <input type="text">
+                <font class="font_color">
+                     请用文字描述您的视力情况
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                现工作单位名称
+            </td>
+            <td>
+                <input type="text">
+                <input type="checkbox">
+                申请职位（发送简历）时发送现工作单位名称(不推荐选择)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                现从事工作职位名称
+            </td>
+            <td>
+                <input type="text">
+                <font class="font_color">
+                如:公司部门经理
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                现职称级别
+            </td>
+            <td>
+                <select>
+                    <option value="">
+                            --请选择--
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+           <td>
+               现从事工作级别
+           </td> 
+           <td>
+               <select name="" id="">
+                   <option value="">
+                       高级职位（非管理类）
+                   </option>
+               </select>
+               <img src="图片1.png" alt="">
+           </td>
+        </tr>
+        <tr>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                现从事职位类别
+            </td>
+            <td>
+                <select name="" id="">
+                    <option value="">
+                        IT-管理
+                    </option>
+                </select>
+                <select name="" id="">
+                    <option value="">
+                        IT-管理
+                    </option>
+                </select>
+                <select name="" id="">
+                    <option value="">
+                        0100，计算机软件
+                    </option>
+                </select>
+                <input type="text" name="" id="">
+                <input type="text" name="" id="">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                从事现职位年限
+            </td>
+            <td>
+                <select name="" id="">
+                    <option value="">1年</option>
+                    <option value="">2年</option>
+                    <option value="">3年</option>
+                    <option value="">4年</option>
+                    <option value="">5年</option>
+                    <option value="">6年</option>
+                    <option value="">7年</option>
+                    <option value="">8年</option>
+                    <option value="">9年</option>
+                    <option value="">10年</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button  style="display:block;margin:0 auto">
+                    保存以上修改
+                </button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html> 

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .slice
+        {
+            background-color:rgb(206, 200, 200);
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <table border="1" style="margin: auto;">
+        <tr>
+            <td colspan="4" class="slice">
+                个人基本信息
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                姓名
+            </td>
+            <td>
+                <input type="text">
+            </td>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                性别
+            </td>
+            <td>
+                <form>
+                    <input type="radio" name="sex">
+                    男
+                    <input type="radio" name="sex">
+                    女
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                籍贯
+            </td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+            <td>
+                出生日期
+            </td>
+            <td>
+                <input type="date" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                个人照片
+            </td>
+            <td  colspan="3">
+                <input type="text" name="" id="">
+                注：照片大小请控制在200K以内。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                身份证号码
+            </td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                毕业院校
+            </td>
+            <td>
+                <input type="" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                最后学历
+            </td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                专业
+            </td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                毕业时间
+            </td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+            <td>
+                <font color = "red">
+                    *
+                </font>
+                学位证书
+            </td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="slice">
+                个人能力
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="3">
+                语言能力
+            </td>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                英语能力水平
+            </td>
+            <td colspan="2">
+                <input type="radio" name="english">
+                    四级
+                <input type="radio" name="english">
+                    六级
+                <input type="radio" name="english">
+                    其他
+            </td>
+        </tr>
+        <tr>
+            <td>
+                日本语能力水平
+            </td>
+            <td colspan="2">
+                <input type="radio" name="japanise">
+                1级
+            <input type="radio" name="japanise">
+                2级
+            <input type="radio" name="japanise">
+                3级
+            <input type="radio" name="japanise">
+                4级
+            <input type="radio" name="japanise">
+                其他
+            </td>
+        </tr>
+        <tr>
+            <td>
+                其他语言能力
+            </td>
+            <td colspan="2">
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="3">
+                专业技能
+            </td>
+            <td>
+                计算机语言
+            </td>
+            <td colspan="2">
+                <input type="radio" name="computer_language">
+                    Java
+                <input type="radio" name="computer_language">
+                    .Net
+                <input type="radio" name="computer_language">
+                    C/C++
+                <input type="radio" name="computer_language">
+                    其他
+            </td>
+        </tr>
+        <tr>
+            <td>
+                使用平台
+            </td>
+            <td colspan="2">
+                <input type="radio" name="platform">
+                    Windows系列
+                <input type="radio" name="platform">
+                    Unix系列
+                <input type="radio" name="platform">
+                    其他
+            </td>
+        </tr>
+        <tr>
+            <td>
+                使用数据库
+            </td>
+            <td colspan="2">
+                <input type="radio" name="database">
+                    ORACLE
+                <input type="radio" name="database">
+                    DB2
+                <input type="radio" name="database">
+                    SYBASE/SQL-SEVER
+                <input type="radio"" name="database">
+                    其他
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                所获证书（国家标准考试）
+            </td>
+            <td colspan="2">
+                <input type="radio" name="certificate">
+                    系统分析员
+                <input type="radio" name="certificate">
+                    高级程序员
+                <input type="radio" name="certificate">
+                    程序员
+                <input type="radio"" name="certificate">
+                    其他
+            </td>
+        </tr>
+        <tr>
+            <td>
+                工作经验
+            </td>
+            <td colspan="3">
+                <font color=gray>
+                    格式：工作单位（或项目名称），担任职务，时间，工作内容描述
+                </font>
+                <textarea></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                备注
+            </td>
+            <td colspan="3">
+                <textarea></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="slice">
+                联系方式
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                电话
+            </td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                手机
+            </td>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                E-mail
+            </td>
+            <td colspan="3">
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                通讯地址
+            </td>
+            <td colspan="3">
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="slice">
+                其他
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font color="red">
+                    *
+                </font>
+                调查
+            </td>
+            <td colspan="3">
+                <font color="gray">
+                    您是如何了解本站的：
+                </font>
+                <input type="radio" name="investigate">
+                    海报
+                <input type="radio" name="investigate">
+                    报纸
+                <input type="radio" name="investigate">
+                    电视
+                <input type="radio" name="investigate">
+                    朋友介绍
+                <input type="radio" name="investigate">
+                    搜索引擎
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button style="display:block;margin:0 auto">
+                    提交报名信息
+                </button>
+                <button style="display:block;margin:0 auto">
+                    取消重新填写
+                </button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
