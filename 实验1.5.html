@@ -7,7 +7,7 @@
 </head>
 <body>
     <p>请输入姓名和卡号</p>
-    <form id="form1" name="form1" method="POST" action="">
+    <form id="form1" name="form1" action="">
         <input type="text" name="name" id="name" value="张三">
         <input type="text" name="Card_number" id="Card_number" value="XXXX-XXXX-XXXX-XXXX">
         <button type="button" onclick="fun()">
@@ -18,14 +18,14 @@
 <script>
     function fun()
     {
-        var name = document.forms[0].elements["name"].value;
-        var Card_number = document.forms[0].elements["Card_number"].value;
-        var ok = /^(\d{4}-){3}\d{4}$/;
-        if(!ok.test(Card_number))
-        {
-            alert("卡号格式不对！");
-            return false;
-        }
+        // var name = document.forms[0].elements["name"].value;
+        // var Card_number = document.forms[0].elements["Card_number"].value;
+        // var ok = /^(\d{4}-){3}\d{4}$/;
+        // if(!ok.test(Card_number))
+        // {
+        //     alert("卡号格式不对！");
+        //     return false;
+        // }
         alert("格式正确！");
     }
 </script>

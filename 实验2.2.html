@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table
+        {
+            align : left;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id = "work" onsubmit="fun()">
+        <table>
+            <tr>
+                <td>
+                    电子邮箱：
+                </td>
+                <td>
+                    <input type="text" name="email" id="email">
+                </td>
+            </tr>
+<!-- 
+            <tr>
+                <td>
+                    域名：
+                </td>
+                <td>
+                    <input type="text" name="realm" id="realm" >
+                </td>
+            </tr> -->
+            <tr>
+                <td>
+                    手机号码：
+                </td>
+                <td>
+                    <input type="text" name="mobilphone" id="mobilphone">
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    电话号码：
+                </td>
+                <td>
+                    <input type="text" name="telphone" id="telphone">
+                </td>
+            </tr> -->
+            <tr>
+                <td>
+                    身份证号：
+                </td>
+                <td>
+                    <input type="text" name="id" id="id">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    密码： 
+                </td>
+                <td>
+                    <input type="text" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    IP地址：
+                </td>
+                <td>
+                    <input type="text" name="ipaddress" id="ipaddress">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="" id="">
+                </td>
+            </tr>
+        </table>
+        <!-- <button type="button" onclick="fun()">
+            提交
+        </button> -->
+    </form>
+</body>
+<script>
+    function fun()
+    {
+        // var email = document.getElementById("email").value;
+        // var email_check = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+
+        // var realm = document.getElementById("realm").value;
+        // var realm_check = /^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/;
+        
+        // var mobilphone = document.getElementById("mobilphone").value;
+        // var mobilphone_check = /1\d{10}/;
+        
+        // var telphone = document.getElementById("telphonr").value;
+        // var telphone_check = /(\d{4}-|\d{3}-)?(\d{8}|\d{7})/;
+
+        // var id = document.getElementById("id").value;
+        // var id_check = /\d{15}(\d\d[0-9xX])?/;
+
+        // var password = document.getElementById("password").value;
+        
+        var ipaddress = document.getElementById("ipaddress").value;
+        var ipaddress_check = /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/;
+
+        // if(!email_check.test(email))
+        // {
+        //     alert("电子邮箱错误！");
+        // }
+
+        // if(!mobilphone_check.test(mobilphone))
+        // {
+        //     alert("手机号码错误！");
+        //     // return;
+        // }
+
+        // if(!mobilphone_check.test(mobilphone))
+        // {
+        //     alert("电话号码错误！");
+        //     // return;
+        // }
+
+        // if(!ipaddress_check.test(ipaddress))
+        // {
+        //     alert("IP地址错误！");
+        //     // return;
+        // }
+
+        // if(!id_check.test(id))
+        // {
+        //     alert("身份证号错误！");
+        // }
+
+        if(ipaddress_check.test(ipaddress))
+        {
+            alert("IP地址错误！");
+        }
+
+    }
+</script>
+</html>

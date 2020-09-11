@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>实验内容2</title>
+</head>
+<body>
+<form id="form">
+    <div>
+        <label for="email">E-mail</label>
+        <input id="email"/>
+    </div>
+    <div>
+        <label for="domain">域名</label>
+        <input id="domain"/>
+    </div>
+    <div>
+        <label for="phone">手机号码</label>
+        <input id="phone"/>
+    </div>
+    <div>
+        <label for="telephone">电话号码</label>
+        <input id="telephone"/>
+    </div>
+    <div>
+        <label for="idNum">身份证号</label>
+        <input id="idNum"/>
+    </div>
+    <div>
+        <label for="password">密码</label>
+        <input id="password"/>
+    </div>
+    <div>
+        <label for="ip">ip地址</label>
+        <input id="ip"/>
+    </div>
+    <div id="errInfo"></div>
+    <div>
+        <input type="submit" value="提交"/>
+    </div>
+</form>
+<script>
+    const form = document.getElementById('form')
+    const emailIpt = document.getElementById('email')
+    const domainIpt = document.getElementById('domain')
+    const phoneIpt = document.getElementById('phone')
+    const telephoneIpt = document.getElementById('telephone')
+    const idNumIpt = document.getElementById('idNum')
+    const passwordIpt = document.getElementById('password')
+    const ipIpt = document.getElementById('ip')
+
+    const errInfo = document.getElementById('errInfo')
+
+    // 邮箱，包括数字、字母、下划线
+    const emailReg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+    // 域名
+    const domainReg = /^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/
+    // 手机号
+    const phoneReg = /^1[3456789]\d{9}$/
+    // 固定电话号码
+    const telephoneReg = /^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/
+    // 第二代身份证号（18位）
+    const idNumReg =/^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/
+    // 密码，必须含有数字、字母和特殊字符
+    const passwordReg = /^(?![0-9]+$)(?![a-zA-Z]+$)(?![0-9a-zA-Z]+$)(?![0-9\\W]+$)(?![a-zA-Z\\W]+$)[0-9A-Za-z\\W]{6,18}/
+    // ip地址
+    const ipReg = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/
+
+    form.onsubmit = () => {
+      // 获得输入框的内容
+      let email = emailIpt.value
+      let domain = domainIpt.value
+      let phone = phoneIpt.value
+      let telephone = telephoneIpt.value
+      let idNum = idNumIpt.value
+      let password = passwordIpt.value
+      let ip = ipIpt.value
+
+      if (!emailReg.test(email)) {
+        errInfo.innerText = '邮箱格式错误'
+        return false
+      }
+
+      if (!domainReg.test(domain)) {
+        errInfo.innerText = '域名格式错误'
+        return false
+      }
+
+      if (!phoneReg.test(phone)) {
+        errInfo.innerText = '手机号码格式错误'
+        return false
+      }
+
+      if (!telephoneReg.test(telephone)) {
+        errInfo.innerText = '电话号码格式错误'
+        return false
+      }
+
+      if (!idNumReg.test(idNum)) {
+        errInfo.innerText = '身份证号格式错误'
+        return false
+      }
+
+      if (!passwordReg.test(password)) {
+        errInfo.innerText = '密码验证失败：密码必须含有数字、字母和特殊字符'
+        return false
+      }
+
+      if (!ipReg.test(ip)) {
+        errInfo.innerText = 'ip地址格式错误'
+        return false
+      }
+
+      errInfo.innerText = '提交成功'
+      return false
+    }
+</script>
+</body>
+</html>
