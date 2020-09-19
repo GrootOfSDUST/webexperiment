@@ -1,0 +1,53 @@
+<!DOCTYPE html >
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+    <title>login</title>
+    <script>
+        function check()
+        {
+            var name = document.getElementById("name").value;
+            if(name == null || name == "")
+            {
+                alert("用户姓名不允许为空！");
+            }
+        }
+    </script>
+</head>
+<body>
+<form style="" method="post" action="./login" onsubmit="check()">
+    <table>
+        <tr>
+            <td>
+                <font color="red">*</font>
+                姓名：
+            </td>
+            <td>
+                <input type="text" name="name" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                年龄：
+            </td>
+            <td>
+                <input type="text" name="age" id="age">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                学校：
+            </td>
+            <td>
+                <input type="text" name="school" id="school">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" id="login">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
