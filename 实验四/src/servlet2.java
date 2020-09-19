@@ -12,19 +12,40 @@ public class servlet2 extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-        System.out.println("servlet excuting...");
-        PrintWriter printWriter = resp.getWriter();
-        printWriter.println("<html>");
-        printWriter.println("<head>");
-        printWriter.println("<meta charset='utf-8'>");
-        printWriter.println("<title>结果页面</title>");
-        printWriter.println("</head>");
-        printWriter.println("<body>");
-        printWriter.println("<script>");
-        printWriter.println("<alert>");
-        printWriter.println("</script>");
-        printWriter.println("</body>");
-        printWriter.println("</html>");
+        resp.setCharacterEncoding("utf-8");
+
+        String age = (String) req.getAttribute("age");
+        System.out.println(age);
+        if (Integer.valueOf(age).intValue() < 20)
+        {
+            PrintWriter printWriter = resp.getWriter();
+            printWriter.println("<html>");
+            printWriter.println("<head>");
+            printWriter.println("<meta charset='utf-8'>");
+            printWriter.println("<title>结果页面</title>");
+            printWriter.println("</head>");
+            printWriter.println("<body>");
+            printWriter.println("<h1 style=\"text-align:center;\">欢迎你，少年！</h1>");
+            printWriter.println("</body>");
+            printWriter.println("</html>");
+        }
+        else if (Integer.valueOf(age).intValue() > 40)
+        {
+            resp.sendRedirect("login.jsp");
+        }
+        else
+        {
+            PrintWriter printWriter = resp.getWriter();
+            printWriter.println("<html>");
+            printWriter.println("<head>");
+            printWriter.println("<meta charset='utf-8'>");
+            printWriter.println("<title>结果页面</title>");
+            printWriter.println("</head>");
+            printWriter.println("<body>");
+            printWriter.println("<h1 style=\"text-align:center;\">欢迎您！</h1>");
+            printWriter.println("</body>");
+            printWriter.println("</html>");
+        }
     }
 
     @Override

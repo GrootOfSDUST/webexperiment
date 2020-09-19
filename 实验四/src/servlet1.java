@@ -12,11 +12,11 @@ public class servlet1 extends HttpServlet
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
         {
-
             String name = req.getParameter("name");
             String age = req.getParameter("age");
             String school = req.getParameter("school");
             System.out.println("Login Success!");
+            req.setAttribute("age",age);
             req.getRequestDispatcher("/servlet2").forward(req,resp);
         }
 
