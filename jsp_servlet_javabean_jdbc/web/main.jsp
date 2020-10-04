@@ -11,31 +11,10 @@
     <title>主页面</title>
 </head>
 <body>
-    <form>
-        <table>
-            <tr>
-                <td>
-                    用户名：
-                </td>
-                <td>
-                    <input type="text" name="username" id="username">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    密码：
-                </td>
-                <td>
-                    <input type="password" name="password" id="password">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="submit" id="submit">
-                </td>
-            </tr>
-        </table>
-    </form>
-
+    <h1 align="center">
+        登录成功！
+        <br>
+        欢迎您！
+    </h1>
 </body>
 </html>
