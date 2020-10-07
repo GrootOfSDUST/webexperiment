@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!--使用Spring创建对象，在Spring中这些都称为bean-->
+        <!--bean = 对象-->
+        <bean id = "hello" class="com.groot.dao.Hello">
+            <property name="str" value="Spring">
+            </property>
+        </bean>
+        <bean id = "mysqlImpl" class="com.groot.dao.UserDaoMysqlImpl"></bean>
+        <bean id = "oracleImpl" class="com.groot.dao.UserDaoOracleImpl"></bean>
+        <bean id = "UserServiceImpl" class="com.groot.service.UserServiceImpl">
+            <property name="user" ref = "oracleImpl"></property>
+        </bean>
+</beans>
